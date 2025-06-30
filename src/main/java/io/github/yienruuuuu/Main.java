@@ -1,12 +1,17 @@
 package io.github.yienruuuuu;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * @author Eric.Lee
  * Date: 2025/6/30
- */ //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+ */
+@SpringBootApplication
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        SpringApplication.run(Main.class, args);
     }
+
 }

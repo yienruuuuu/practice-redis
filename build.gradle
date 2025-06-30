@@ -1,19 +1,21 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '3.3.7'
+    id 'io.spring.dependency-management' version '1.1.0'
 }
 
 group = 'io.github.yienruuuuu'
 version = '1.0-SNAPSHOT'
+sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-}
-
-test {
-    useJUnitPlatform()
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+    // 若你要用 JSON 序列化
+    implementation("com.fasterxml.jackson.core:jackson-databind")
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
 }
